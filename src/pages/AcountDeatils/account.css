@@ -1,0 +1,22 @@
+
+.constainer{max-width: 1280px;margin: 0 auto;}
+.Account_details{} .Account_details::before{background:url(../../images//image_processing.jpg) no-repeat;width: 60%;height: 600px;position: absolute;content:'';left: 20%;}
+.Account_details .MuiGrid-root {position: relative;} .MuiGrid-root.justify_account{display: flex;justify-content: center;align-items: center;margin-top: 60px;} .justify_account .MuiPaper-root.MuiPaper-elevation{    width: 80%;padding: 50px;
+height: 316px;border-radius: 25px;box-shadow: none;}
+.top_details{display: flex;justify-content: space-between;} 
+.top_details label {display: flex;align-items: center;gap: 10px;}
+.top_details .MuiOutlinedInput-input{width: 350px;    padding-left: 30px;} .search_icon{position: relative;} .search_icon svg{    position: absolute;top: 11px;left: 6px;font-size: 20px;}
+.top_details .MuiInputLabel-root.MuiInputLabel-formControl{padding-left: 18px;font-size: 13px;
+padding-top: 3px;}
+.top_details .MuiInputLabel-root.MuiInputLabel-formControl[data-shrink="true"]{padding-left: 0;}
+.Accounts label{text-align: start;font-weight: 600;padding: 10px 0;color:#222;font-size: 17px;} .socialmedia{display: flex;flex-direction: column;gap:10px}
+.Accounts{text-align: start;padding: 20px 0;} 
+.socialmedia span { width: 75px; height: 50px; background-color: #fff; border-radius: 100px; display: flex; align-items: center; justify-content: center;
+} .socialmedia span img{width: 30px;height: 30px;} .google_drive{display: flex;align-items: center;gap:140px;padding: 10px;}
+.google_drive label{display: flex;flex-direction: column;gap:5px;color: #222;font-size: 13px;font-weight: 600;text-align: start;width: 100%;}
+.google_drive label small{color: #555;font-size: 9px;font-weight: 400;} .google_drivedetails{display: flex;align-items: center;width: 100%;gap:6px} .google_drive p{width: auto;}
+.more_accounts{display: flex;justify-content: space-between;align-items: center;} .more_accounts{background-color: #fff;    width: 54px;
+    height: 28px;border-radius: 100%;}
+.google_drive:hover{background-color: #f3f1f1;
+    cursor: pointer;
+    border-radius: 15px;} .top_details .MuiOutlinedInput-notchedOutline{    border-color: #5555552e;}
