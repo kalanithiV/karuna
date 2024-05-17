@@ -11,40 +11,23 @@ import AddingIntegrity from "../src/pages/AddingIntegrity/Adding-Integrity"
 
 function App() {
 
-  const items =["gypsy1","gypsy2","gypsy3"]
+  const items = ["gypsy1", "gypsy2", "gypsy3"]
   const ffff = "Dddd"
-  const onClick=()=>{
+  const onClick = () => {
     alert("ddddddd")
   }
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      {/* <FirstComponent  items={items}  ffff={ffff} onClick={onClick}/>
-      <ConditionalRendering /> */}
-
       <div className='container'>
-   <Header />  
-   
-     <Homepage /> 
-       <PaymentDetails /> 
-       <AccountDetails /> 
+        <Header />
 
-      <AddingIntegrity />
+        <Homepage />
+        <PaymentDetails />
+        <AccountDetails />
+
+        <AddingIntegrity />
       </div>
- 
+
 
     </div>
   );
