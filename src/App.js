@@ -35,11 +35,12 @@ function App() {
       {/* <FirstComponent  items={items}  ffff={ffff} onClick={onClick}/>
       <ConditionalRendering /> */}
 
-      {/* <AccountDetails /> */}
       <div className='container'>
-   {/* <Header />  */}
-     {/* <Homepage />  */}
-      {/* <PaymentDetails /> */}
+   <Header />  
+   
+     <Homepage /> 
+       <PaymentDetails /> 
+       <AccountDetails /> 
 
       <AddingIntegrity />
       </div>
