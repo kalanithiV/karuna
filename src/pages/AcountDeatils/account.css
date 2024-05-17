@@ -1,6 +1,7 @@
 
 .constainer{max-width: 1280px;margin: 0 auto;}
 .Account_details{} .Account_details::before{background:url(../../images//image_processing.jpg) no-repeat;width: 60%;height: 600px;position: absolute;content:'';left: 20%;}
+.Account_details {margin-top: 30px;margin-bottom: 30px;}
 .Account_details .MuiGrid-root {position: relative;} .MuiGrid-root.justify_account{display: flex;justify-content: center;align-items: center;margin-top: 60px;} .justify_account .MuiPaper-root.MuiPaper-elevation{    width: 80%;padding: 50px;
 height: 316px;border-radius: 25px;box-shadow: none;}
 .top_details{display: flex;justify-content: space-between;} 

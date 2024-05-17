@@ -24,3 +24,4 @@ img{max-width: 100%;}
   color: rgb(255, 255, 255);
   cursor: pointer;
   border: none;} .Add_inputData{display: flex;justify-content: center;align-items: center;margin-top: 20px;flex-direction: column;gap:20px} .Add_inputData input{padding: 8px;} .Add_inputData button{width: 200px;} .Add_inputData ul{list-style: none;padding: 0;}
+  .Integrity{margin:130px 0 0  0;}
