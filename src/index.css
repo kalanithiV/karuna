@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img{max-width: 100%;}
+.header_list{display: flex;justify-content: space-between;padding: 30px 0;align-items: center;}
+.container{margin: 0 auto;max-width: 1280px;padding: 0 30px;}
+.header_details{display: flex;} .header_details ul{list-style: none;display: flex;gap:15px}
+.header_details ul li{display: inline-block;gap:10px}
+.login_details{display: flex;gap:20px;align-items: center;} .login_details button{border: 1px solid #0000003b;background-color: #fff;padding: 12px 15px 12px 15px;border-radius: 10px;cursor: pointer;}
+.Integrity ul.fetch_Data{box-shadow: (0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;background: #555; color: #fff }
+.More_detials{margin-top:20px}
+.Integrity button,.pt_1{    background-color: blue;
+  padding: 10px 30px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border: none;} .Add_inputData{display: flex;justify-content: center;align-items: center;margin-top: 20px;flex-direction: column;gap:20px} .Add_inputData input{padding: 8px;} .Add_inputData button{width: 200px;} .Add_inputData ul{list-style: none;padding: 0;}
