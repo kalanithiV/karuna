@@ -1,8 +1,9 @@
 
+import React from "react"
 import "../payment-details/payment.css"
-import CardInfo from "../../pages/payment-details/cardinfo"
+import CardInfo from "./cardinfo"
 
-export default function () {
+const paymentDetail:React.FC = ()=> {
  
     const update =()=>{
         alert("rrrrrr")
@@ -18,3 +19,4 @@ export default function () {
 
     )
 }
+export default paymentDetail

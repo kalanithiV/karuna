@@ -1,11 +1,11 @@
-import "../Home/home.css"
-import IntegrateImg from "../../images/integrate.png"
+import React from "react"
 import Button from "../../components/Buttons/Freetrail"
 import SocialMedais from "../../components/Buttons/SocialMedia"
+import "../Home/home.css"
 
 
 
-export default function () {
+const homepage:React.FC=()=>{
     return (
         <div className="homepage">
             <div className="integrate_stack">
@@ -16,9 +16,10 @@ export default function () {
                 <SocialMedais />
             </div>
             <div className="integrate_img">
-                <img src={IntegrateImg} />
+                {/* <img src="../../images/integrate.png" /> */}
             </div>
 
         </div>
     )
 }
+export default homepage
