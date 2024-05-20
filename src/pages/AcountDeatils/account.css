@@ -21,3 +21,5 @@ padding-top: 3px;}
 .google_drive:hover{background-color: #f3f1f1;
     cursor: pointer;
     border-radius: 15px;} .top_details .MuiOutlinedInput-notchedOutline{    border-color: #5555552e;}
+    .account-item img{width: 20px;}
+    .google_drive span img{width: 30px;height: 30px;} 
