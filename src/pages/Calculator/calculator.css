@@ -1,33 +1,105 @@
-table { 
-    margin-left: auto; 
-    margin-right: auto; 
-} 
-  
-table button { 
-    width: 100%; 
-    padding: 10px 40px; 
-    background-color: #f1f3f4; 
-    color: #222; 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table button {
+    width: 100%;
+    padding: 10px 40px;
+    background-color: #f1f3f4;
+    color: #222;
     /* color: #dbdbe0; */
-    font-size: 17px; 
-    font-weight: bold; 
-    border: none; 
-    border-radius: 5px; 
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     border: 1px solid #f1f3f4;
-} 
-.expressions{background-color: #dbdbe0;}
-table button:hover{background: #a1a1a1;color: #fff;}
-table input[type="text"] { 
-    padding: 20px 30px; 
-    font-size: 24px; 
-    font-weight: bold; 
-    border: none; 
-    border-radius: 8px; 
-    border: 1px solid #a1a0a0a6; 
+}
+
+.expressions {
+    background-color: #dbdbe0;
+}
+
+table button:hover {
+    background: #a1a1a1;
+    color: #fff;
+}
+
+table input[type="text"] {
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    border: 1px solid #a1a0a0a6;
     width: 84%;
     text-align: right;
     margin: 10px 0;
-} 
-.equalBut{background-color: #6679f8;color: #fff;}
-.undoIcon{padding: 5px 30px;}
+}
+
+.equalBut {
+    background-color: #6679f8;
+    color: #fff;
+}
+
+.undoIcon {
+    padding: 5px 30px;
+}
+
+/* .calculator_operators{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+} */
+.calculator {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    
+}
+
+.calculator .calculator_operators {
+    display: flex;
+    gap: 10px;
+    width: 400px;
+    flex-wrap: wrap;
+}
+.calculator  input{
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    border: 1px solid #a1a0a0a6;
+    width: 84%;
+    text-align: right;
+    margin: 10px 0;
+
+}
+
+.calculator_operators button {
+  width: 90px;height: 42px;
+    background-color: #f1f3f4;
+    color: #222;
+    /* color: #dbdbe0; */
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #f1f3f4;
+}
+
+.calculator_operators button:hover {
+    background: #a1a1a1;
+    color: #fff;
+}
+.calculator .expressions {
+    background-color: #dbdbe0;
+}
+.calculator .equalBut {
+    background-color: #6679f8;
+    color: #fff;
+}
