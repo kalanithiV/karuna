@@ -12,11 +12,11 @@ function App() {
     <div className="App">
 
       <div className='container'>
-      <Header />
+      {/* <Header />
     <Homepage />
     <PaymentDetails />
-    {/* <AccountDetails /> */}
-    <AddingIntegrity />
+    <AccountDetails />
+    <AddingIntegrity /> */}
     <Calculator />
     </div>
     </div>
