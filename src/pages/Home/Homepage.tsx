@@ -2,7 +2,7 @@ import React from "react"
 import Button from "../../components/Buttons/Freetrail"
 import SocialMedais from "../../components/Buttons/SocialMedia"
 import "../Home/home.css"
-
+import Integrateimg from "../../images/integrate.png"
 
 
 const homepage:React.FC=()=>{
@@ -16,7 +16,7 @@ const homepage:React.FC=()=>{
                 <SocialMedais />
             </div>
             <div className="integrate_img">
-                {/* <img src="../../images/integrate.png" /> */}
+                <img src={Integrateimg} />
             </div>
 
         </div>
