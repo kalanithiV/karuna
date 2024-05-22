@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Homepage from './pages/Home/Homepage';
 import AddingIntegrity from './pages/AddingIntegrity/Adding-Integrity';
 import Calculator from './pages/Calculator/calcucaltor';
+import Fooddetails from './pages/fooddetails/fooddetails'
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
     <AccountDetails />
     <AddingIntegrity /> */}
     <Calculator />
+    <Fooddetails />
     </div>
     </div>
 
