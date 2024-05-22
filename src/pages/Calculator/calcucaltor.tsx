@@ -9,8 +9,14 @@ interface CalculatorDetails {
   type: string
 }
 
+
 const Calculator: React.FC = () => {
   const [result, setResult] = useState("0");
+
+
+
+
+
   const listing: CalculatorDetails[] = [
     {
       id: 1,
@@ -127,32 +133,58 @@ const Calculator: React.FC = () => {
       setResult(result.slice(0, -1) || "0");
     } else if (type === "equal") {
       try {
-        const finalValue = eval(result);
-        const fourDigits = String(finalValue).slice(0, 4)
-        const remainingvalue = String(finalValue).slice(0, 3)
+        const finalValue = Math.floor(eval(result));
+        console.log(finalValue, "finalValuefinalValuefinalValue")
+        const total = finalValue.toString();
 
-        console.log("eeeee", remainingvalue)
-        const fullvalue = fourDigits + '.' + remainingvalue
-        setResult(fullvalue);
-        console.log("valueeee fixed", finalValue)
-        if (finalValue === Infinity) {
-          toast.error('Devision by zero is undefined', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            // transition: Bounce,
-          });
-          setResult("0")
+        if (total.length >= 6) {
+          const fourDigits = Math.floor(finalValue / 1000);
+          console.log(fourDigits, "fourDigitsfourDigitsfourDigits")
+          const remainingvalue = Math.round(finalValue % 1000);
+          console.log(remainingvalue, "remainingvalueremainingvalueremainingvalue")
+
+          console.log("eeeee", remainingvalue);
+          const fullvalue = fourDigits.toString() + '.' + remainingvalue;
+          console.log(fullvalue, "fullvaluefullvalue")
+          setResult(fullvalue);
+        } else {
+          setResult(total);
         }
-      } catch (err) {
-        alert("incorrect");
 
+        console.log("valueeee fixed", finalValue);
+
+        if (finalValue === Infinity) {
+          // toast.error('Division by zero is undefined', {
+          //   position: "top-center",
+          //   autoClose: 5000,
+          //   hideProgressBar: false,
+          //   closeOnClick: true,
+          //   pauseOnHover: true,
+          //   draggable: true,
+          //   progress: undefined,
+          //   theme: "light",
+          // });
+          setResult("0");
+        }
+      } catch (error) {
+        console.error("Error evaluating result:", error);
+        toast.error('An error occurred during evaluation', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setResult("0");
       }
+
+      // catch (err) {
+      //     alert("incorrect");
+
+      //   }
     }
   };
 
@@ -163,8 +195,7 @@ const Calculator: React.FC = () => {
   return (
     <>
       <div className="calculator">
-
-
+        
         <div className="calculator_operators">
           <input type="text" value={result} onChange={handleChange} />
           {listing.map((items) => (
@@ -189,6 +220,8 @@ const Calculator: React.FC = () => {
           ))}
         </div>
       </div>
+
+
       <ToastContainer
         position="top-left"
         autoClose={5000}
@@ -201,6 +234,7 @@ const Calculator: React.FC = () => {
         pauseOnHover
         theme="light"
       ></ToastContainer>
+
     </>
   );
 };
