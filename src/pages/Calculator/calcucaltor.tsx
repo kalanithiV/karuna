@@ -9,14 +9,8 @@ interface CalculatorDetails {
   type: string
 }
 
-
 const Calculator: React.FC = () => {
   const [result, setResult] = useState("0");
-
-
-
-
-
   const listing: CalculatorDetails[] = [
     {
       id: 1,
@@ -154,16 +148,6 @@ const Calculator: React.FC = () => {
         console.log("valueeee fixed", finalValue);
 
         if (finalValue === Infinity) {
-          // toast.error('Division by zero is undefined', {
-          //   position: "top-center",
-          //   autoClose: 5000,
-          //   hideProgressBar: false,
-          //   closeOnClick: true,
-          //   pauseOnHover: true,
-          //   draggable: true,
-          //   progress: undefined,
-          //   theme: "light",
-          // });
           setResult("0");
         }
       } catch (error) {
