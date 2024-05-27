@@ -38,6 +38,7 @@ export default function Fooddetails() {
         item.strMeal && item.strMeal.toLowerCase().includes(search)
     ));
 
+
     useEffect(() => {
         fetchDetails();
     }, []);
