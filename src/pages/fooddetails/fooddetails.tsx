@@ -1,14 +1,18 @@
 
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import "../fooddetails/food.css";
 import TextField from '@mui/material/TextField';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import foodService from "../../api/services/foodservice";
-import PlaceIcon from '@mui/icons-material/Place';
-const Fooddetails: React.FC = () => {
-    const [list, setList] = React.useState<any[]>([]);
-    const [search, setSearch] = React.useState<string>("");
+import FoodList from "../../components/Foodsection/FoodList"
+import Spinner from "../../components/Common/Spinner"
+import { useState, useEffect } from "react";
+
+export default function Fooddetails() {
+    const [list, setList] = useState<any[]>([]);
+    const [search, setSearch] = useState<string>("");
+    const [isLoading, setIsLoading] = useState(true)
+
     const fetchDetails = async () => {
         try {
             const response = await foodService.fooddetails();
@@ -19,11 +23,13 @@ const Fooddetails: React.FC = () => {
             } else {
                 alert("rrrrr")
             }
+            setIsLoading(false)
         } catch (error) {
             console.error("Fetch error: ", error);
         }
     }
-    const searchMeals = (e: any) => {
+
+    const searchMeals = (e:any) => {
         setSearch(e.target.value);
         console.log(e.target.value, "mealsss");
     }
@@ -32,7 +38,7 @@ const Fooddetails: React.FC = () => {
         item.strMeal && item.strMeal.toLowerCase().includes(search)
     ));
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetchDetails();
     }, []);
 
@@ -40,24 +46,15 @@ const Fooddetails: React.FC = () => {
         <div className='food_Details'>
             <div className="top_details">
                 <SearchTwoToneIcon />
-                <TextField id="outlined-basic" label="Search" variant="outlined" size="small" onChange={searchMeals} />
+                <TextField id="outlined-basic" label="Search the meal" variant="outlined" size="small" onChange={searchMeals} />
             </div>
+            {
+                isLoading ?
+                    <Spinner /> :
+                    <FoodList filtermeals={filtermeals} />
 
-            <div className='food_orders'>
-                {filtermeals.map((item: any, index: any) => (
-                    <Link key={index} to={`/food-detailpage/${item.idMeal}`}>
-                        <div className='food_lists'>
-                            <span><img src={item.strMealThumb} alt="Goat" /></span>
-                            <p>{item.strMeal}
-                            <label><PlaceIcon />{item.strArea}</label>
-                            </p>
+            }
 
-                        </div>
-                    </Link>
-                ))}
-            </div>
         </div>
     );
 }
-export default Fooddetails;
-
