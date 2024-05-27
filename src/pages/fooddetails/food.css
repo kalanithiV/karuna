@@ -84,7 +84,7 @@
 .top_details {
     position: relative;
     margin-top: 40px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 .top_details label {
@@ -269,9 +269,18 @@
 @media only screen and (max-width: 1024px) {
 .food_detail_page .detail_meal{padding: 0;}
 .food_detail_page .detail_meal img{width: 100%;}
+.food_lists{width: 300px;}
 .detail_mealImg{height: 400px;}
+}
+@media only screen and (max-width: 991px) {
+.food_lists{width: 342px;}
+
 }
 @media only screen and (max-width: 568px) {
 .detail_mealImg{height: 250px;}
-
+.food_lists{width: 350px;}
+.top_details .MuiOutlinedInput-input{width: 100%;}
+.food_detail_page .detail_meal p ol {
+flex-direction: column;gap:10px
+}
 }
