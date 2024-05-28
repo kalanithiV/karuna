@@ -29,7 +29,7 @@ export default function Fooddetails() {
         }
     }
 
-    const searchMeals = async (e:any) => {
+    const searchMeals = async (e: any) => {
         const SerachItem = e.target.value;
         setSearch(SerachItem);
         if (SerachItem === "") {
@@ -41,14 +41,8 @@ export default function Fooddetails() {
             const response = await foodService.searchMeals(SerachItem);
             if (response.status === 200) {
                 const data = response.data;
-                setList(data.meals || []); 
-                console.log("Eeeeeeeeee",data)
-                // if(data.meals === null ){
-                //     alert("varataaaaa")
-                // }
-                // else{
-                //     console.log("ffff")
-                // }
+                setList(data.meals || []);
+                console.log("Eeeeeeeeee", data)
             } else {
                 alert("Failed to search meals");
                 console.log("Failed to search meals")
@@ -60,7 +54,6 @@ export default function Fooddetails() {
     };
 
     useEffect(() => {
-        
         fetchDetails();
     }, []);
 
@@ -70,7 +63,7 @@ export default function Fooddetails() {
                 <SearchTwoToneIcon />
                 <TextField id="outlined-basic" label="Search the meal" variant="outlined" size="small" onChange={searchMeals} />
             </div>
-            {isLoading ?<Loader /> : <FoodList list={list} />}
+            {isLoading ? <Loader /> : <FoodList list={list} />}
         </div>
     );
 }

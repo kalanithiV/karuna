@@ -5,37 +5,59 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 interface itesAction {
     items: any,
-    BenifitsOffood: any
+    BenifitsOffood: any,
+    strIngredient1: any,
+    strIngredient2: any,
+    strIngredient3: any,
+    strIngredient4: any,
+    strIngredient5: any,
+    strIngredient6: any,
+    strSource: any,
+    strYoutube: any
+    strMeal: any,
+    benifits: any,
+    strInstructions:any
 }
-export default function FoodContent({ items, BenifitsOffood }: itesAction) {
+export default function FoodContent({ 
+    items, 
+    BenifitsOffood,
+     strMeal,
+    strIngredient1, 
+    strIngredient2,
+    strIngredient3,
+    strIngredient4,
+    strIngredient5,
+    strIngredient6,
+    strSource,strYoutube,strInstructions
+ }: itesAction) {
     console.log(items, "Dfffffffffff")
     return (
         <div className='section_Details'>
-            <h3>Benifits of {items.strMeal}</h3>
+            <h3>Benifits of {strMeal}</h3>
             {
                 BenifitsOffood.map((items: any, index: any) => (
                     <span key={index}>{items.benifits}</span>
                 ))
             }
             <h3>Instructions</h3>
-            <span>{items.strInstructions}</span>
+            <span>{strInstructions}</span>
             <h3>Necessary Materials</h3>
-            <ol><li>{items.strIngredient1}</li>
-                <li>{items.strIngredient2}</li>
-                <li>{items.strIngredient3}</li>
-                <li>{items.strIngredient4}</li>
-                <li>{items.strIngredient5}</li>
-                <li>{items.strIngredient6}</li>
+            <ol><li>{strIngredient1}</li>
+                <li>{strIngredient2}</li>
+                <li>{strIngredient3}</li>
+                <li>{strIngredient4}</li>
+                <li>{strIngredient5}</li>
+                <li>{strIngredient6}</li>
             </ol>
             <div className='moredetails'>
                 <small>Get more Details &nbsp;</small>
 
                 <label>
-                    <Link href={items.strSource} target="#">
+                    <Link href={strSource} target="#">
                         <LanguageIcon />
                     </Link>
 
-                    <Link href={items.strYoutube} target="#">
+                    <Link href={strYoutube} target="#">
                         <YouTubeIcon />
                     </Link>
                 </label>

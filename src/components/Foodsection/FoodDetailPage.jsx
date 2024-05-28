@@ -87,8 +87,20 @@ export default function FoodDetailPage() {
                     <>
                         <h3>{items.strMeal}</h3>
                         <div className="detail_meal" key={index}>
-                            <FoodDetailImage items={items} />
-                            <FoodDetailContent items={items} BenifitsOffood={BenifitsOffood} />
+                            <FoodDetailImage strMealThumb={items.strMealThumb} strMeal={items.strMeal} />
+                            <FoodDetailContent items={items} BenifitsOffood={BenifitsOffood}
+                                strMeal={items.strMeal}
+                                benifits={items.benifits}
+                                strIngredient1={items.strIngredient1}
+                                strIngredient2={items.strIngredient2}
+                                strIngredient3={items.strIngredient3}
+                                strIngredient4={items.strIngredient4}
+                                strIngredient5={items.strIngredient5}
+                                strIngredient6={items.strIngredient6}
+                                strSource={items.strSource}
+                                strYoutube={items.strYoutube}
+                                strInstructions={items.strInstructions}
+                            />
                         </div>
                     </>
                 ))
@@ -96,11 +108,6 @@ export default function FoodDetailPage() {
             )
 
             }
-
-
-
-
-
         </div>
     );
 }
