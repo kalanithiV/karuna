@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Search from '../../components/TableHead/search'
+import Search from '../../components/TableHead/Search'
 import Account from "../../components/Account/account"
 import Microsoftimg from "../../images/drive.png"
 import Insta from "../../images/instagram.png"
