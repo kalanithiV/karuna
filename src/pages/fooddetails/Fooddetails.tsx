@@ -12,7 +12,6 @@ export default function Fooddetails() {
     const [list, setList] = useState<any[]>([]);
     const [search, setSearch] = useState<string>("");
     const [isLoading, setIsLoading] = useState(true)
-
     const fetchDetails = async () => {
         try {
             const response = await foodService.fooddetails();
@@ -28,16 +27,10 @@ export default function Fooddetails() {
             console.error("Fetch error: ", error);
         }
     }
-
     const searchMeals = (e: any) => {
         setSearch(e.target.value);
         console.log(e.target.value, "mealsss");
     }
-
-    // const filtermeals = list.filter((item: any) => (
-    //     item.strMeal && item.strMeal.toLowerCase().includes(search)
-    // ));
-
     useEffect(() => {
         fetchDetails();
     }, []);
@@ -48,13 +41,7 @@ export default function Fooddetails() {
                 <SearchTwoToneIcon />
                 <TextField id="outlined-basic" label="Search the meal" variant="outlined" size="small" onChange={searchMeals} />
             </div>
-            {
-                isLoading ?
-                    <Loader /> :
-                    <FoodList list={list} />
-
-            }
-
+            { isLoading ? <Loader /> : <FoodList list={list} /> }
         </div>
     );
 }

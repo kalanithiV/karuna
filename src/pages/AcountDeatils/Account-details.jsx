@@ -41,8 +41,6 @@ const drivedetails = [{
     websitelink: "microsoft.com",
     totol_account: "5",
     image:Microsoftimg 
-
-
 }
 ]
 

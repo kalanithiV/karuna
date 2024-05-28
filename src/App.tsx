@@ -20,7 +20,6 @@ function App() {
           <Route path="/food-detailpage/:id" element={<Fooddetailpage />} />
           </Routes>
         </Router>
-    
     </div>
     </div>
 
