@@ -1,15 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import foodService from "../../api/services/foodservice";
-import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Loader from "../Common/Loader"
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LanguageIcon from '@mui/icons-material/Language';
 import FoodDetailContent from "./FoodDetailContent"
-import FoodDetailImage from "../Foodsection/FoodDetailImage"
+import FoodDetailImage from "./FoodDetailImage"
+
+
+interface MealItem {
+    strMeal: number;
+    strMealThumb: string;
+    benifits: string;
+    strIngredient1: string;
+    strIngredient2: string;
+    strIngredient3: string;
+    strIngredient4: string;
+    strIngredient5: string;
+    strIngredient6: string;
+    strSource: string;
+    strYoutube: string;
+    strInstructions: string;
+}
+
+
 const BenifitsOffood = [
     {
         id: 1,
@@ -35,18 +49,14 @@ const BenifitsOffood = [
         id: 6,
         benifits: "As a high or good source of these important nutrients beef is an important food to include in diets."
     },
-
-
-
 ]
 
-// import Link from '@mui/material/Link';
 export default function FoodDetailPage() {
     const { id } = useParams();
     const [meal, setMeal] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const fetchDetails = async (id) => {
+    const fetchDetails = async (id:any) => {
         try {
             const response = await foodService.fooddetailsbyID(id);
             console.log(response, "yyyyyyyyy")
@@ -83,12 +93,12 @@ export default function FoodDetailPage() {
             {isLoading ? (
                 <Loader />
             ) : (
-                meal.map((items, index) => (
+                meal.map((items:MealItem, index) => (
                     <>
                         <h3>{items.strMeal}</h3>
                         <div className="detail_meal" key={index}>
                             <FoodDetailImage strMealThumb={items.strMealThumb} strMeal={items.strMeal} />
-                            <FoodDetailContent items={items} BenifitsOffood={BenifitsOffood}
+                            <FoodDetailContent BenifitsOffood={BenifitsOffood}
                                 strMeal={items.strMeal}
                                 benifits={items.benifits}
                                 strIngredient1={items.strIngredient1}

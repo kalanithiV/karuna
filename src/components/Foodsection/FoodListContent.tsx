@@ -2,21 +2,19 @@ import { Link } from 'react-router-dom';
 import PlaceIcon from '@mui/icons-material/Place';
 
 interface FoodListtype {
-    index: any,
-    idMeal: any,
-    strMealThumb: any,
-    strArea: any,
-    strMeal: any
+    idMeal: number,
+    strMealThumb: string,
+    strArea: string,
+    strMeal: string
 }
-export default function FoodListContent({ index, idMeal, strMealThumb, strArea, strMeal }: FoodListtype) {
+export default function FoodListContent({  idMeal, strMealThumb, strArea, strMeal }: FoodListtype) {
     return (
-        <Link key={index} to={`/food-detailpage/${idMeal}`}>
+        <Link  to={`/food-detailpage/${idMeal}`}>
             <div className='food_lists'>
                 <span><img src={strMealThumb} alt="Goat" /></span>
                 <p>{strMeal}
                     <label><PlaceIcon />{strArea}</label>
                 </p>
-
             </div>
         </Link>
     )

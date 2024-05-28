@@ -200,6 +200,7 @@
     margin-left: -6px;
     color: #555555de;
 }
+.food_lists p label svg{color:green}
 
 .Breadcrumb {
     display: flex;

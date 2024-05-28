@@ -4,22 +4,24 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import LanguageIcon from '@mui/icons-material/Language';
 
 interface itesAction {
-    items: any,
-    BenifitsOffood: any,
-    strIngredient1: any,
-    strIngredient2: any,
-    strIngredient3: any,
-    strIngredient4: any,
-    strIngredient5: any,
-    strIngredient6: any,
-    strSource: any,
-    strYoutube: any
-    strMeal: any,
-    benifits: any,
-    strInstructions:any
+    BenifitsOffood: benifitsfood[],
+    strIngredient1: string,
+    strIngredient2: string,
+    strIngredient3: string,
+    strIngredient4: string,
+    strIngredient5: string,
+    strIngredient6: string,
+    strSource: string,
+    strYoutube: string
+    strMeal: number,
+    benifits: string,
+    strInstructions:string,
+}
+interface benifitsfood{
+    id:number,
+    benifits:string
 }
 export default function FoodContent({ 
-    items, 
     BenifitsOffood,
      strMeal,
     strIngredient1, 
@@ -30,13 +32,12 @@ export default function FoodContent({
     strIngredient6,
     strSource,strYoutube,strInstructions
  }: itesAction) {
-    console.log(items, "Dfffffffffff")
     return (
         <div className='section_Details'>
             <h3>Benifits of {strMeal}</h3>
-            {
-                BenifitsOffood.map((items: any, index: any) => (
-                    <span key={index}>{items.benifits}</span>
+             {
+                BenifitsOffood.map((item: benifitsfood) => (
+                    <span key={item.id}>{item.benifits}</span>
                 ))
             }
             <h3>Instructions</h3>

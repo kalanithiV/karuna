@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import Fooddetails from './pages/Fooddetails/FoodSection';
 import Fooddetailpage from './components/Foodsection/FoodDetailPage';
