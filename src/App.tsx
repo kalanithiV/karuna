@@ -7,6 +7,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import EmployeeDetails from "./pages/Employees/MovieDetails"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
           <Route path="/" element={<Fooddetails />} />
           <Route path="/food-detailpage/:id" element={<Fooddetailpage />} />
+          <Route path="/employee-detail" element={<EmployeeDetails />} />
           </Routes>
         </Router>
     </div>

@@ -1,0 +1,27 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 20px 8px;
+    background-color: #555;
+    color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .movie_list table tr td a{text-decoration: none;}
+  .movie_list tr td button{background: #555;border: none;padding:10px 25px;color: #fff;border-radius: 6px;cursor: pointer;}
+  .movie_list tr td button:hover{background: blue;color: #fff;}
+  .movie_list p{text-align: center;display: inline-block;width: 100%;}
