@@ -1,11 +1,11 @@
 interface FoodImgtype {
-    strMealThumb: any,
-    strMeal:any
+    strMealThumb: string,
+    strMeal:number
 }
 export default function FoodDetailImage({ strMealThumb,strMeal }: FoodImgtype) {
     return (
         <div className="detail_mealImg">
-            <img src={strMealThumb} alt={strMeal} />
+            <img src={strMealThumb} />
         </div>
     )
 }

@@ -6,18 +6,19 @@ import LanguageIcon from '@mui/icons-material/Language';
 interface itesAction {
     items: any,
     BenifitsOffood: any,
-    strIngredient1: any,
-    strIngredient2: any,
-    strIngredient3: any,
-    strIngredient4: any,
-    strIngredient5: any,
-    strIngredient6: any,
+    strIngredient1: string,
+    strIngredient2: string,
+    strIngredient3: string,
+    strIngredient4: string,
+    strIngredient5: string,
+    strIngredient6: string,
     strSource: any,
     strYoutube: any
-    strMeal: any,
-    benifits: any,
-    strInstructions:any
+    strMeal: number,
+    benifits: string,
+    strInstructions:string,
 }
+
 export default function FoodContent({ 
     items, 
     BenifitsOffood,
@@ -35,8 +36,8 @@ export default function FoodContent({
         <div className='section_Details'>
             <h3>Benifits of {strMeal}</h3>
             {
-                BenifitsOffood.map((items: any, index: any) => (
-                    <span key={index}>{items.benifits}</span>
+                BenifitsOffood.map((items:itesAction) => (
+                    <span >{items.benifits}</span>
                 ))
             }
             <h3>Instructions</h3>
