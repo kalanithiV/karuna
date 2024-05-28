@@ -1,7 +1,7 @@
 
 import React from "react"
-import "../payment-details/payment.css"
-import CardInfo from "./cardinfo"
+import "./payment.css"
+import CardInfo from "./CardInfo"
 
 const paymentDetail:React.FC = ()=> {
  

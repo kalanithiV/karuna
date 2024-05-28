@@ -154,7 +154,7 @@
     height: 400px;
 }
 
-.food_detail_page .detail_meal p {
+.food_detail_page .detail_meal .section_Details {
     text-align: start;
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@
     width: 100%;
 }
 
-.food_detail_page .detail_meal p span {
+.food_detail_page .detail_meal .section_Details span {
     margin-bottom: 10px;
     position: relative;
     padding-left: 30px;
@@ -171,7 +171,7 @@
     line-height: 27px;
 }
 
-.food_detail_page .detail_meal p span::before {
+.food_detail_page .detail_meal .section_Details span::before {
     background-color: #2F294A;
     width: 8px;
     height: 8px;
@@ -224,14 +224,14 @@
     min-height: 400px;
 }
 
-.food_detail_page .detail_meal p ol {
+.food_detail_page .detail_meal .section_Details ol {
     display: flex;
     gap: 40px;
     margin: 0;
     flex-wrap: wrap;
 }
 
-.food_detail_page .detail_meal p ol li {
+.food_detail_page .detail_meal .section_Details ol li {
     color: #999393;
     font-size: 17px;
 }
@@ -280,7 +280,7 @@
 .detail_mealImg{height: 250px;}
 .food_lists{width: 350px;}
 .top_details .MuiOutlinedInput-input{width: 100%;}
-.food_detail_page .detail_meal p ol {
+.food_detail_page .detail_meal .section_Details ol {
 flex-direction: column;gap:10px
 }
 }

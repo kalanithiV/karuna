@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
 import foodService from "../../api/services/foodservice";
 import FoodList from "../../components/Foodsection/FoodList"
-import Spinner from "../../components/Common/Spinner"
+import Loader from "../../components/Common/Loader"
 import { useState, useEffect } from "react";
 
 export default function Fooddetails() {
@@ -29,15 +29,14 @@ export default function Fooddetails() {
         }
     }
 
-    const searchMeals = (e:any) => {
+    const searchMeals = (e: any) => {
         setSearch(e.target.value);
         console.log(e.target.value, "mealsss");
     }
 
-    const filtermeals = list.filter((item: any) => (
-        item.strMeal && item.strMeal.toLowerCase().includes(search)
-    ));
-
+    // const filtermeals = list.filter((item: any) => (
+    //     item.strMeal && item.strMeal.toLowerCase().includes(search)
+    // ));
 
     useEffect(() => {
         fetchDetails();
@@ -51,8 +50,8 @@ export default function Fooddetails() {
             </div>
             {
                 isLoading ?
-                    <Spinner /> :
-                    <FoodList filtermeals={filtermeals} />
+                    <Loader /> :
+                    <FoodList list={list} />
 
             }
 
