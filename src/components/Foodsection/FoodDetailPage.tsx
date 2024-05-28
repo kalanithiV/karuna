@@ -98,7 +98,7 @@ export default function FoodDetailPage() {
                         <h3>{items.strMeal}</h3>
                         <div className="detail_meal" key={index}>
                             <FoodDetailImage strMealThumb={items.strMealThumb} strMeal={items.strMeal} />
-                            <FoodDetailContent items={items} BenifitsOffood={BenifitsOffood}
+                            <FoodDetailContent BenifitsOffood={BenifitsOffood}
                                 strMeal={items.strMeal}
                                 benifits={items.benifits}
                                 strIngredient1={items.strIngredient1}
